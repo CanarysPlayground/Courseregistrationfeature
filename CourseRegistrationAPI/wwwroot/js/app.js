@@ -236,7 +236,9 @@ function displaySystemInfo(info) {
         const strong = document.createElement('strong');
         strong.textContent = label + ': ';
         p.appendChild(strong);
-        p.appendChild(document.createTextNode(value));
+        // Handle null/undefined values gracefully
+        const displayValue = (value !== null && value !== undefined) ? String(value) : 'N/A';
+        p.appendChild(document.createTextNode(displayValue));
         return p;
     };
     
