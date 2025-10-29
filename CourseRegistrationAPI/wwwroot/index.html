@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Course Registration System</h1>
+            <p class="subtitle">Welcome to the Course Management Portal</p>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <h2>Get Started with Course Registration</h2>
+                <p class="hero-description">
+                    Register for courses, manage your academic schedule, and stay connected with your educational journey.
+                </p>
+                
+                <div class="action-buttons">
+                    <button id="registerButton" class="btn btn-primary">
+                        Register Now
+                    </button>
+                    <a href="/swagger" class="btn btn-secondary">
+                        API Documentation
+                    </a>
+                </div>
+            </section>
+
+            <section class="features-section">
+                <div class="feature-card">
+                    <h3>📚 Course Management</h3>
+                    <p>Browse and register for available courses</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Student Portal</h3>
+                    <p>Manage your profile and enrollments</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👨‍🏫 Instructor Access</h3>
+                    <p>View and manage course rosters</p>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h3>System Information</h3>
+                <div id="systemInfo" class="info-box">
+                    <p>Loading system information...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Course Registration System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>User Registration</h2>
+            
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role *</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select Role</option>
+                        <option value="0">Student</option>
+                        <option value="1">Instructor</option>
+                        <option value="2">Admin</option>
+                    </select>
+                </div>
+
+                <div id="studentSection" class="form-group" style="display: none;">
+                    <label for="studentId">Student ID</label>
+                    <select id="studentId" name="studentId">
+                        <option value="">Select Student Profile</option>
+                    </select>
+                </div>
+
+                <div id="instructorSection" class="form-group" style="display: none;">
+                    <label for="instructorId">Instructor ID</label>
+                    <select id="instructorId" name="instructorId">
+                        <option value="">Select Instructor Profile</option>
+                    </select>
+                </div>
+
+                <div id="errorMessage" class="error-message"></div>
+                <div id="successMessage" class="success-message"></div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="button" id="cancelButton" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
