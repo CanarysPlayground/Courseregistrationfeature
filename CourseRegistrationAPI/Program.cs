@@ -71,12 +71,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Course Registration API v1");
-        c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
+        c.RoutePrefix = "swagger"; // Move Swagger UI to /swagger
         c.DocumentTitle = "Course Registration API Documentation";
         c.DefaultModelsExpandDepth(-1); // Collapse models by default
         c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None); // Collapse operations by default
     });
 }
+
+// Serve static files from wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
@@ -120,7 +124,8 @@ app.MapGet("/api/info", () => new
 
 Console.WriteLine("=== Course Registration API Started ===");
 Console.WriteLine($"Environment: {app.Environment.EnvironmentName}");
-Console.WriteLine("Swagger UI: https://localhost:7000 (when running in development)");
+Console.WriteLine("Home Page: https://localhost:7000 (when running in development)");
+Console.WriteLine("Swagger UI: https://localhost:7000/swagger");
 Console.WriteLine("Health Check: /health");
 Console.WriteLine("API Info: /api/info");
 Console.WriteLine("========================================");
