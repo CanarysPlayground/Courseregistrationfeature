@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hemavathin\\Documents\\Projects\\Courseregistrationfeature\\CourseRegistrationAPI\\CourseRegistrationAPI.csproj": {}
+    "/home/runner/work/Courseregistrationfeature/Courseregistrationfeature/CourseRegistrationAPI/CourseRegistrationAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hemavathin\\Documents\\Projects\\Courseregistrationfeature\\CourseRegistrationAPI\\CourseRegistrationAPI.csproj": {
+    "/home/runner/work/Courseregistrationfeature/Courseregistrationfeature/CourseRegistrationAPI/CourseRegistrationAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hemavathin\\Documents\\Projects\\Courseregistrationfeature\\CourseRegistrationAPI\\CourseRegistrationAPI.csproj",
+        "projectUniqueName": "/home/runner/work/Courseregistrationfeature/Courseregistrationfeature/CourseRegistrationAPI/CourseRegistrationAPI.csproj",
         "projectName": "CourseRegistrationAPI",
-        "projectPath": "C:\\Users\\hemavathin\\Documents\\Projects\\Courseregistrationfeature\\CourseRegistrationAPI\\CourseRegistrationAPI.csproj",
-        "packagesPath": "C:\\Users\\hemavathin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hemavathin\\Documents\\Projects\\Courseregistrationfeature\\CourseRegistrationAPI\\obj\\",
+        "projectPath": "/home/runner/work/Courseregistrationfeature/Courseregistrationfeature/CourseRegistrationAPI/CourseRegistrationAPI.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/Courseregistrationfeature/Courseregistrationfeature/CourseRegistrationAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hemavathin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
