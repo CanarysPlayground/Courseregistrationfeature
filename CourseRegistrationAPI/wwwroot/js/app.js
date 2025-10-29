@@ -219,18 +219,32 @@ async function loadSystemInfo() {
 function displaySystemInfo(info) {
     const infoBox = document.getElementById('systemInfo');
     
+    // Clear previous content
+    infoBox.innerHTML = '';
+    
     if (info.error) {
-        infoBox.innerHTML = `<p style="color: var(--danger-color);">${info.error}</p>`;
+        const errorPara = document.createElement('p');
+        errorPara.style.color = 'var(--danger-color)';
+        errorPara.textContent = info.error;
+        infoBox.appendChild(errorPara);
         return;
     }
     
-    infoBox.innerHTML = `
-        <p><strong>Title:</strong> ${info.title}</p>
-        <p><strong>Version:</strong> ${info.version}</p>
-        <p><strong>Description:</strong> ${info.description}</p>
-        <p><strong>Database:</strong> ${info.database}</p>
-        <p><strong>Sample Data:</strong> ${info.sampleData}</p>
-    `;
+    // Create elements safely using textContent
+    const createInfoParagraph = (label, value) => {
+        const p = document.createElement('p');
+        const strong = document.createElement('strong');
+        strong.textContent = label + ': ';
+        p.appendChild(strong);
+        p.appendChild(document.createTextNode(value));
+        return p;
+    };
+    
+    infoBox.appendChild(createInfoParagraph('Title', info.title));
+    infoBox.appendChild(createInfoParagraph('Version', info.version));
+    infoBox.appendChild(createInfoParagraph('Description', info.description));
+    infoBox.appendChild(createInfoParagraph('Database', info.database));
+    infoBox.appendChild(createInfoParagraph('Sample Data', info.sampleData));
 }
 
 // Show error message
